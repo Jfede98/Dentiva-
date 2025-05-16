@@ -1,8 +1,36 @@
-<nav>
-  <ul>
-    <li><a routerLink="/">Inicio</a></li>
-    <li><a routerLink="/quienes-somos">Quiénes somos</a></li>
-    <li><a routerLink="/servicios">Servicios</a></li>
-    <li><a routerLink="/contactanos">Contáctanos</a></li>
-  </ul>
+<nav class="bg-sky-600 text-white">
+  <div class="container mx-auto px-4 md:flex items-center gap-6">
+    <!-- Logo -->
+    <div class="flex items-center justify-between md:w-auto w-full">
+      <a routerLink="/" class="py-5 px-2 text-white flex-1 font-bold">Dentiva</a>
+
+      <!-- mobile menu icon -->
+      <div class="md:hidden flex items-center">
+        <button type="button" class="mobile-menu-button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="hidden md:flex md:flex-row flex-col items-center justify-start md:space-x-1 pb-3 md:pb-0 navigation-menu">
+      <a routerLink="/" class="py-2 px-3 block">Inicio</a>
+      <a routerLink="/quienes-somos" class="py-2 px-3 block">Quiénes somos</a>
+      <!-- Dropdown menu -->
+      <div class="relative">
+        <button type="button" class="dropdown-toggle py-2 px-3 hover:bg-sky-800 flex items-center gap-2 rounded">
+          <span class="pointer-events-none select-none">Servicios</span>
+          <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          </svg>
+        </button>
+        <div class="dropdown-menu absolute hidden bg-sky-700 text-white rounded-b-lg pb-2 w-48">
+          <a routerLink="/dental" class="block px-6 py-2 hover:bg-sky-800">Dental</a>
+          <a routerLink="/estetico" class="block px-6 py-2 hover:bg-sky-800">Estetico</a>
+        </div>
+      </div>
+      <a routerLink="/contactanos" class="py-2 px-3 block">Contáctanos</a>
+    </div>
+  </div>
 </nav>
