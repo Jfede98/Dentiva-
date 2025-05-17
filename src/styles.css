@@ -1,2 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+
+@layer theme{
+    @theme{
+        --font-inter: "Inter", sans-serif;
+        --font-montserrat: "Montserrat", sans-serif;
+        --color-dorado-navh: #C09844;
+        --color-dorado-navp: #937028;
+        --color-dorado-buttonph:#BF9847;
+        --color-dorado-buttonpd:#CDCDCD;
+        --color-textodisabled:#A2A2A2;
+        --color-fondo-buttons:#FFEDC700;
+        --color-fondo-buttonsh:#FFEDC7;
+    }
+}

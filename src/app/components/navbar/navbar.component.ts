@@ -13,42 +13,42 @@ export class NavbarComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     const hostElement = this.el.nativeElement as HTMLElement;
 
-    // Dropdown toggles
-    const dropdownToggles = hostElement.querySelectorAll<HTMLButtonElement>('.dropdown-toggle');
-    const dropdownMenus = hostElement.querySelectorAll<HTMLElement>('.dropdown-menu');
+    
+    // const dropdownToggles = hostElement.querySelectorAll<HTMLButtonElement>('.dropdown-toggle');
+    // const dropdownMenus = hostElement.querySelectorAll<HTMLElement>('.dropdown-menu');
 
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', (event) => {
-        event.stopPropagation(); // Evita que cierre el menú al hacer click en el botón
+    // dropdownToggles.forEach(toggle => {
+    //   toggle.addEventListener('click', (event) => {
+    //     event.stopPropagation(); 
 
-        const dropdownMenu = toggle.nextElementSibling as HTMLElement;
+    //     const dropdownMenu = toggle.nextElementSibling as HTMLElement;
 
-        if (dropdownMenu.classList.contains('hidden')) {
-          dropdownMenus.forEach(menu => menu.classList.add('hidden')); // Cierra otros
-          dropdownMenu.classList.remove('hidden');
-        } else {
-          dropdownMenu.classList.add('hidden');
-        }
-      });
-    });
+    //     if (dropdownMenu.classList.contains('hidden')) {
+    //       dropdownMenus.forEach(menu => menu.classList.add('hidden')); 
+    //       dropdownMenu.classList.remove('hidden');
+    //     } else {
+    //       dropdownMenu.classList.add('hidden');
+    //     }
+    //   });
+    // });
 
-    // Cerrar dropdown si se hace click fuera
-    if (typeof window !== 'undefined') {
-      window.addEventListener('click', (e: Event) => {
-        const target = e.target as HTMLElement;
-        if (!target.closest('.dropdown-toggle')) {
-          dropdownMenus.forEach(menu => {
-            if (!menu.contains(target)) {
-              menu.classList.add('hidden');
-            }
-          });
-        }
-      });
-    }
+
+    // if (typeof window !== 'undefined') {
+    //   window.addEventListener('click', (e: Event) => {
+    //     const target = e.target as HTMLElement;
+    //     if (!target.closest('.dropdown-toggle')) {
+    //       dropdownMenus.forEach(menu => {
+    //         if (!menu.contains(target)) {
+    //           menu.classList.add('hidden');
+    //         }
+    //       });
+    //     }
+    //   });
+    // }
 
     // Menú hamburguesa móvil
     const mobileMenuButton = hostElement.querySelector<HTMLButtonElement>('.mobile-menu-button');
-    const mobileMenu = hostElement.querySelector<HTMLElement>('.navigation-menu');
+    const mobileMenu = hostElement.querySelector<HTMLElement>('.navigation-menu-mobile');
 
     if (mobileMenuButton && mobileMenu) {
       mobileMenuButton.addEventListener('click', () => {
