@@ -1,66 +1,114 @@
 <main class="font-ubuntu">
   <!-- HERO SECTION -->
-  <section class="bg-gradient-to-b from-zinc-200 to-zinc-100 py-16 px-4 text-center">
-    <h1 class="text-4xl font-bold text-gray-900">Dentiva</h1>
-    <h2 class="text-xl text-gray-700 mt-2">DENTIVA CLÍNICA DENTAL & ESTÉTICA</h2>
-    <p class="text-lg text-gray-700 mt-2">Descripcion 2</p>
-    <div class="mt-4 flex justify-center gap-4 flex-wrap">
-      <button class="mt-4  px-4 py-2 rounded-full font-semibold text-[var(--color-dorado-navp)] border border-[var(--color-dorado-navp)] hover:bg-[var(--color-fondo-buttonsh)] transition">Agendar una hora</button>
-      <button class="mt-4  px-4 py-2 rounded-full font-semibold text-white bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] transition">Llamar al 12345678</button>
+<section
+  class="relative bg-cover bg-center px-6 text-white h-[500px] md:h-[850px]"
+  style="background-image: url('/./dentiva-bannerhome.png');"
+>
+<div class="absolute inset-0 bg-black opacity-40"></div>
+  <div class="relative max-w-4xl mx-auto h-full flex flex-col justify-center text-left md:text-left text-center">
+    <h1 class="text-5xl md:text-6xl font-bold">Dentiva</h1>
+    <h2 class="text-2xl md:text-3xl mt-2">CLÍNICA DENTAL & ESTÉTICA</h2>
+    <p class="text-lg md:text-xl mt-4">Combinamos experiencia y conocimiento en cada procedimiento para garantizar resultados.</p>
+
+    <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-4">
+      <a href="https://8ae8c9cefc8bfd0f423f19afb00c802f2ae29dbd.agenda.softwaredentalink.com/agenda?modalidad=1" target="_blank" rel="noopener noreferrer">
+        <button class="mt-4 px-4 py-2 rounded-full font-semibold text-[var(--color-dorado-navp)] border border-[var(--color-dorado-navp)] bg-[var(--color-fondo-buttonsh)] cursor-pointer transition">
+          Agendar una hora
+        </button>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=56999935071&text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer">
+        <button class="mt-4 px-4 py-2 rounded-full font-semibold text-white bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] cursor-pointer transition">
+          Llamar al 12345678
+        </button>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- DESTACADO -->
-  <section class="py-12 px-4 flex flex-col lg:flex-row items-center gap-8 max-w-7xl mx-auto">
-    <img src="https://via.placeholder.com/300x400" alt="Imagen destacada" class="w-full lg:w-1/2 rounded-xl" />
-    <div class="w-full lg:w-1/2 space-y-4">
-      <p class="text-blue-600 font-semibold">Titulo</p>
-      <p>Subtitulo</p>
-      <ul class="list-disc pl-6 text-gray-700">
-        <li>Punto 1</li>
-        <li>Punto 2</li>
-        <li>Punto 3</li>
-      </ul>
-      <div class="flex gap-4">
-        <div class="bg-gray-100 p-4 rounded shadow w-1/2">
-          <p class="text-2xl font-bold">$199</p>
-          <p>Precio especial 1</p>
-        </div>
-        <div class="bg-gray-100 p-4 rounded shadow w-1/2">
-          <p class="text-2xl font-bold">$199</p>
-          <p>Precio especial 2</p>
-        </div>
-      </div>
-      <div class="flex gap-4 mt-4">
-        <button class="mt-4 w-full px-4 py-2 rounded-full font-semibold text-[var(--color-dorado-navp)] border border-[var(--color-dorado-navp)] hover:bg-[var(--color-fondo-buttonsh)] transition">Ver nuestros servicios</button>
-        <button class="mt-4 w-full px-4 py-2 rounded-full font-semibold text-white bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] transition">Agendar una hora</button>
+<!-- DESTACADO -->
+<section class="py-12 px-4 flex flex-col-reverse lg:flex-row items-center gap-8 max-w-7xl mx-auto">
+  <!-- Imagen -->
+  <div class="w-full lg:w-1/2 flex justify-center">
+    <img src="./dentiva-silla.png" alt="Imagen destacada" class="w-3/4 lg:w-[80%] rounded-xl" />
+  </div>
+
+  <!-- Texto -->
+  <div class="w-full lg:w-1/2 space-y-4">
+    <p class="text-dorado-navp font-bold">Ortodoncia y Ortopedia</p>
+    <p>En nuestra especialidad de Endodoncia, nos enfocamos en el diagnóstico y tratamiento de las enfermedades que afectan la pulpa dental y los tejidos que rodean la raíz del diente.</p>
+    
+    <!-- Lista con íconos personalizados -->
+    <ul class="space-y-2">
+      <li class="flex items-start gap-2">
+        <img src="./check.svg" alt="Check" class="w-5 h-5 mt-1" />
+        <span>Ortodoncia Metálica</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <img src="./check.svg" alt="Check" class="w-5 h-5 mt-1" />
+        <span>Ortodoncia Estética (Zafiro)</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <img src="./check.svg" alt="Check" class="w-5 h-5 mt-1" />
+        <span>Ortodoncia Invisible</span>
+      </li>
+    </ul>
+
+    <!-- Precio centrado -->
+    <div class="flex justify-center">
+      <div class="bg-gray-100 p-6 rounded shadow text-center w-64">
+        <p class="text-4xl font-bold text-dorado-navp">$0</p>
+        <p class="text-lg">Costo instalación</p>
       </div>
     </div>
-  </section>
+
+    <!-- Botones -->
+    <div class="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
+      <a href="https://8ae8c9cefc8bfd0f423f19afb00c802f2ae29dbd.agenda.softwaredentalink.com/agenda?modalidad=1" target="_blank" rel="noopener noreferrer">
+        <button class="px-4 py-2 rounded-full font-semibold text-[var(--color-dorado-navp)] border border-[var(--color-dorado-navp)] hover:bg-[var(--color-fondo-buttonsh)] cursor-pointer transition">
+          Agendar una hora
+        </button>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=56999935071&text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer">
+        <button class="px-4 py-2 rounded-full font-semibold text-white bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] cursor-pointer transition">
+          Llamar al 12345678
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+
 
   <!-- ABOUT DENTIVA -->
   <section class="bg-gray-100 py-12 px-4">
     <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 items-center">
       <div class="w-full lg:w-1/2 space-y-4">
-        <h3 class="text-xl font-bold text-blue-800">About Dentiva</h3>
-        <p class="text-gray-700">
-          Provemos la mejor calidad de servicio dental cerca de ti
+        <h3 class="text-xl font-bold text-[var(--color-dorado-navp)]">Acerca de Dentiva</h3>
+        <p class="text-black font-bold">
+          Proveemos la mejor calidad de servicio dental cerca de ti
         </p>
         <p>
-          En nuestra clínica dental, ofrecemos lo mejor en cuanto a calidad dental y tratamiento para mejorar tu higiene oral.
+          En nuestra clinica dental, ofrecemos lo mejor en cuanto a cuidado dental y tratamiento para mejorar tu higiene oral. uestros expertos se han preparado para proveer procedimientos dentales seguros para que nuestros pacientes se sientan relajados y comodos cuando nos visitan.
         </p>
         <ul class="space-y-2">
           <li class="flex items-start gap-2">
             <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm1 15h-2v-2h2v2zm0-4h-2V5h2v6z" /></svg>
             <span>Dentistas altamente profesionales</span>
+            <p>
+              Encendemos tu sonrisa con servicios dentales de parte nuestros expertos dentistas.
+            </p>
           </li>
           <li class="flex items-start gap-2">
             <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm1 15h-2v-2h2v2zm0-4h-2V5h2v6z" /></svg>
             <span>Proveemos la mejor calidad de servicio dental cerca de ti</span>
+            <p>
+              Proveemos la mejor calidad de servicio dental cerca de ti.
+            </p>
           </li>
         </ul>
       </div>
-      <img src="https://via.placeholder.com/300x400" alt="Equipo Dentiva" class="w-full lg:w-1/2 rounded-xl" />
+      <img src="./equipo-co.png" alt="Equipo Dentiva" class="w-full lg:w-1/2 rounded-xl" />
     </div>
   </section>
 
@@ -69,7 +117,7 @@
     <h3 class="text-blue-800 font-semibold">Nuestro equipo dental</h3>
     <h2 class="text-2xl font-bold mb-4">Los mejores dentistas de Providencia</h2>
     <p class="max-w-2xl mx-auto mb-8 text-gray-600">
-      Provemos la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti.
+      Proveemos la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti.
     </p>
     <div class="flex flex-wrap justify-center gap-4">
       <!-- Doctor card -->
@@ -87,7 +135,7 @@
   <section class="bg-gray-100 py-12 px-4">
     <h2 class="text-2xl font-bold text-center mb-4">Nuestros servicios dentales en Santiago</h2>
     <p class="text-center max-w-2xl mx-auto mb-8 text-gray-600">
-      Provemos la mejor calidad de servicio dental cerca de ti.
+      Proveemos la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti.
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
       <!-- Servicio card -->
