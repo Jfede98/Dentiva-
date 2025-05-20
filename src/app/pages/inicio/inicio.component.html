@@ -1,4 +1,4 @@
-<main class="font-ubuntu">
+<main class="font-montserrat">
   <!-- HERO SECTION -->
 <section
   class="relative bg-cover bg-center px-6 text-white h-[500px] md:h-[850px]"
@@ -26,7 +26,6 @@
 </section>
 
 
-  <!-- DESTACADO -->
 <!-- DESTACADO -->
 <section class="py-12 px-4 flex flex-col-reverse lg:flex-row items-center gap-8 max-w-7xl mx-auto">
   <!-- Imagen -->
@@ -64,7 +63,7 @@
     </div>
 
     <!-- Botones -->
-    <div class="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
+    <div class="flex  justify-center gap-4 mt-4">
       <a href="https://8ae8c9cefc8bfd0f423f19afb00c802f2ae29dbd.agenda.softwaredentalink.com/agenda?modalidad=1" target="_blank" rel="noopener noreferrer">
         <button class="px-4 py-2 rounded-full font-semibold text-[var(--color-dorado-navp)] border border-[var(--color-dorado-navp)] hover:bg-[var(--color-fondo-buttonsh)] cursor-pointer transition">
           Agendar una hora
@@ -80,77 +79,158 @@
 </section>
 
 
-  <!-- ABOUT DENTIVA -->
-  <section class="bg-gray-100 py-12 px-4">
-    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 items-center">
-      <div class="w-full lg:w-1/2 space-y-4">
-        <h3 class="text-xl font-bold text-[var(--color-dorado-navp)]">Acerca de Dentiva</h3>
-        <p class="text-black font-bold">
-          Proveemos la mejor calidad de servicio dental cerca de ti
-        </p>
-        <p>
-          En nuestra clinica dental, ofrecemos lo mejor en cuanto a cuidado dental y tratamiento para mejorar tu higiene oral. uestros expertos se han preparado para proveer procedimientos dentales seguros para que nuestros pacientes se sientan relajados y comodos cuando nos visitan.
-        </p>
-        <ul class="space-y-2">
-          <li class="flex items-start gap-2">
-            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm1 15h-2v-2h2v2zm0-4h-2V5h2v6z" /></svg>
-            <span>Dentistas altamente profesionales</span>
-            <p>
-              Encendemos tu sonrisa con servicios dentales de parte nuestros expertos dentistas.
-            </p>
-          </li>
-          <li class="flex items-start gap-2">
-            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm1 15h-2v-2h2v2zm0-4h-2V5h2v6z" /></svg>
-            <span>Proveemos la mejor calidad de servicio dental cerca de ti</span>
-            <p>
-              Proveemos la mejor calidad de servicio dental cerca de ti.
-            </p>
-          </li>
-        </ul>
-      </div>
-      <img src="./equipo-co.png" alt="Equipo Dentiva" class="w-full lg:w-1/2 rounded-xl" />
-    </div>
-  </section>
+<!-- ABOUT DENTIVA -->
+<section class="bg-gray-100 py-12 px-4">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 items-center">
+    <!-- Texto -->
+    <div class="w-full lg:w-1/2 space-y-6"> 
+      <h3 class="text-2xl font-bold text-[var(--color-dorado-navp)]">Acerca de Dentiva</h3>
+      <p class="text-2xl text-black font-bold">Proveemos la mejor calidad de servicio dental cerca de ti</p>
+      <p class="text-lg">
+        En nuestra clínica dental, ofrecemos lo mejor en cuanto a cuidado dental y tratamiento para mejorar tu higiene oral. Nuestros expertos se han preparado para proveer procedimientos dentales seguros para que nuestros pacientes se sientan relajados y cómodos cuando nos visitan.
+      </p>
 
-  <!-- EQUIPO DENTAL -->
-  <section class="py-12 px-4 text-center">
-    <h3 class="text-blue-800 font-semibold">Nuestro equipo dental</h3>
-    <h2 class="text-2xl font-bold mb-4">Los mejores dentistas de Providencia</h2>
-    <p class="max-w-2xl mx-auto mb-8 text-gray-600">
-      Proveemos la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti.
-    </p>
-    <div class="flex flex-wrap justify-center gap-4">
-      <!-- Doctor card -->
-      <div class="bg-white rounded-xl shadow p-4 w-[160px] flex flex-col items-center">
-        <div class="w-24 h-24 bg-gray-100 rounded-full"></div>
-        <p class="font-semibold mt-2">Dr. Roberto Chavez</p>
-        <p class="text-sm text-gray-500">Ortodoncista</p>
-        <button class="mt-2 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Agendar una hora</button>
-      </div>
-      <!-- Repite según sea necesario -->
+      <!-- Lista con icono + texto alineado -->
+      <ul class="space-y-6 mt-6"> <!-- mayor separación y fuente más grande -->
+        <li class="flex items-start gap-4">
+          <img src="./icono-diente.svg" alt="" class="w-7 h-7 mt-1" />
+          <div>
+            <span class="block text-[var(--color-dorado-navp)] text-xl font-semibold">Dentistas altamente profesionales</span>
+            <p class="text-lg">Encendemos tu sonrisa con servicios dentales de parte de nuestros expertos dentistas.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <img src="./icono-carpeta.svg" alt="" class="w-7 h-7 mt-1" />
+          <div>
+            <span class="block text-[var(--color-dorado-navp)] text-xl font-semibold">Proveemos la mejor calidad de servicio dental cerca de ti</span>
+            <p class="text-lg">Proveemos la mejor calidad de servicio dental cerca de ti.</p>
+          </div>
+        </li>
+      </ul>
     </div>
-  </section>
 
-  <!-- SERVICIOS EN SANTIAGO -->
-  <section class="bg-gray-100 py-12 px-4">
-    <h2 class="text-2xl font-bold text-center mb-4">Nuestros servicios dentales en Santiago</h2>
-    <p class="text-center max-w-2xl mx-auto mb-8 text-gray-600">
-      Proveemos la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti la mejor calidad de servicio dental cerca de ti.
-    </p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-      <!-- Servicio card -->
-      <div class="bg-white p-4 rounded-xl shadow text-center">
-        <div class="w-full h-40 bg-gray-200 rounded"></div>
-        <h3 class="text-blue-800 mt-4 font-semibold">Nuestro equipo dental</h3>
-        <p class="text-sm text-gray-600 mt-2">
-          Provemos la mejor calidad de servicio dental cerca de ti.
-        </p>
-        <button class="mt-4 bg-blue-600 text-white px-4 py-1 rounded-full text-sm">Ver mas</button>
+    <!-- Imagen -->
+    <img src="./equipo-co.png" alt="Equipo Dentiva" class="w-full lg:w-1/2 rounded-xl" />
+  </div>
+</section>
+
+
+
+<!-- EQUIPO DENTAL -->
+<section class="py-12 px-4 text-center">
+  <h3 class="text-[var(--color-dorado-navp)] font-semibold">Nuestro equipo dental</h3>
+  <h2 class="text-2xl font-bold mb-4 text-[var(--color-dorado-navp)]">Los mejores dentistas de Providencia</h2>
+  <p class="max-w-2xl mx-auto mb-8 text-gray-600">
+    Proveemos la mejor calidad de servicio dental cerca de ti. Nuestro equipo está compuesto por profesionales altamente capacitados, listos para brindarte atención con calidez y experiencia.
+  </p>
+
+  <!-- Cards -->
+  <div class="flex flex-wrap justify-center items-center gap-6">
+    <!-- Card 1 -->
+    <div class="bg-foundation-y75 rounded-xl shadow p-6 w-64 flex flex-col items-center border-2 border-[var(--color-foundation-y100)]">
+      <div class="w-28 h-28 bg-gray-100 rounded-full mb-3">
+        <img src="./drchavez.png" alt="">
       </div>
-      <!-- Repite 7 más -->
+      <p class="font-semibold text-[var(--color-dorado-navp)]">Dr. Roberto Chavez</p>
+      <p class="text-sm text-black mb-2">Ortodoncista</p>
+      <a href="https://8ae8c9cefc8bfd0f423f19afb00c802f2ae29dbd.agenda.softwaredentalink.com/agenda?modalidad=1" target="_blank" rel="noopener noreferrer">
+        <button class="text-white bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] transition px-4 py-1.5 rounded-full text-sm">
+          Agendar una hora
+        </button>
+      </a>
     </div>
-    <div class="flex justify-center mt-8">
-      <button class="bg-red-600 text-white px-6 py-2 rounded-full">Ver todas los servicios</button>
+
+    <!-- Card 2 -->
+    <div class="bg-foundation-y75 rounded-xl shadow p-6 w-64 flex flex-col items-center border-2 border-[var(--color-foundation-y100)]">
+      <div class="w-28 h-28 bg-gray-100 rounded-full mb-3">
+        <img src="./drayepez.png" alt="">
+      </div>
+      <p class="font-semibold text-[var(--color-dorado-navp)]">Dra. Lisseth Yepez</p>
+      <p class="text-sm text-black mb-2">Endodoncista</p>
+      <button class="text-white bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] transition px-4 py-1.5 rounded-full text-sm">
+        Agendar una hora
+      </button>
     </div>
-  </section>
+
+    <!-- Card 3 -->
+    <div class="bg-foundation-y75 rounded-xl shadow p-6 w-64 flex flex-col items-center border-2 border-[var(--color-foundation-y100)]">
+      <div class="w-28 h-28 bg-gray-100 rounded-full mb-3">
+        <img src="./drasalas.png" alt="">
+      </div>
+      <p class="font-semibold text-[var(--color-dorado-navp)]">Dra. Liset Salas</p>
+      <p class="text-sm text-black mb-2">Ortodoncista</p>
+      <button class="text-white bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] transition px-4 py-1.5 rounded-full text-sm">
+        Agendar una hora
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SERVICIOS EN SANTIAGO -->
+<section class="bg-gray-100 py-12 px-4">
+  <h2 class="text-2xl text-[var(--color-dorado-navp)] font-semibold text-center mb-4">Nuestros servicios dentales en Santiago</h2>
+  <p class="text-center max-w-2xl mx-auto mb-8 text-gray-600">
+    Todas las Especialidades  | Especialistas acreditados  | Seguimiento personalizado de cada tratamiento
+  </p>
+
+  <div class="flex flex-wrap justify-center items-center gap-6">
+    <!-- Servicio card -->
+    <div class="bg-foundation-y75 p-6 w-72 rounded-xl shadow text-center">
+      <div class="w-full h-40 bg-gray-200 rounded"></div>
+      <h3 class="text-[var(--color-dorado-navp)] mt-4 font-semibold">Nuestro equipo dental</h3>
+      <p class="text-sm text-gray-600 mt-2">
+        Proveemos la mejor calidad de servicio dental cerca de ti.
+      </p>
+      <button class="mt-4 text-[var(--color-dorado-navp)] bg-white border border-[var(--color-dorado-navp)] hover:bg-[var(--color-fondo-buttonsh)] transition px-4 py-1 rounded-full text-sm">
+        Ver más
+      </button>
+    </div>
+
+    <!-- Duplicar según necesidad -->
+    <div class="bg-foundation-y75 p-6 w-72 rounded-xl shadow text-center">
+      <div class="w-full h-40 bg-gray-200 rounded"></div>
+      <h3 class="text-[var(--color-dorado-navp)] mt-4 font-semibold">Ortodoncia avanzada</h3>
+      <p class="text-sm text-gray-600 mt-2">
+        Tratamientos para alinear tus dientes con tecnología moderna.
+      </p>
+      <button class="mt-4 text-[var(--color-dorado-navp)] bg-white border border-[var(--color-dorado-navp)] hover:bg-[var(--color-fondo-buttonsh)] transition px-4 py-1 rounded-full text-sm">
+        Ver más
+      </button>
+    </div>
+
+    <div class="bg-foundation-y75 p-6 w-72 rounded-xl shadow text-center">
+      <div class="w-full h-40 bg-gray-200 rounded"></div>
+      <h3 class="text-[var(--color-dorado-navp)] mt-4 font-semibold">Estética dental</h3>
+      <p class="text-sm text-gray-600 mt-2">
+        Devuélvele la belleza a tu sonrisa con nuestros especialistas.
+      </p>
+      <button class="mt-4 text-[var(--color-dorado-navp)] bg-white border border-[var(--color-dorado-navp)] hover:bg-[var(--color-fondo-buttonsh)] transition px-4 py-1 rounded-full text-sm">
+        Ver más
+      </button>
+    </div>
+  </div>
+
+  <div class="flex justify-center mt-8">
+    <button class="bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] transition text-white px-6 py-2 rounded-full">
+      Ver todos los servicios
+    </button>
+  </div>
+</section>
+
+<!-- ENCUÉNTRANOS -->
+<section class="py-12 px-4 text-center">
+  <h2 class="text-2xl text-[var(--color-dorado-navp)] font-semibold mb-2">Encuéntranos</h2>
+  <p class="text-gray-600 mb-6">Dr. Manuel Barros Borgoño 160, Oficina 607 (Metro Manuel Montt)</p>
+
+  <div class="max-w-3xl mx-auto overflow-hidden rounded-xl shadow">
+    <iframe 
+      class="w-full h-96"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1664.8669107451328!2d-70.61857513616076!3d-33.430183299929915!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf7cd39403c7%3A0x8162aba2f78276da!2sDr.%20Manuel%20Barros%20Borgo%C3%B1o%20160%2C%20Santiago%2C%20Providencia%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e0!3m2!1sen!2sus!4v1747721757351!5m2!1sen!2sus"
+      frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
 </main>
