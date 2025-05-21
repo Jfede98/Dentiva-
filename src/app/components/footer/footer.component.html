@@ -1,0 +1,92 @@
+<!-- FOOTER PRINCIPAL -->
+<footer class="bg-[#232324] text-white py-10 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+    
+    <!-- COLUMNA IZQUIERDA: TEXTO -->
+    <div class="space-y-4">
+      <h3 class="text-xl font-semibold">Ven y descubre nuestro concepto dental.</h3>
+      <p class="text-[var(--color-dorado-navp)] font-semibold">Reserva tu hora</p>
+      <p>Dr Manuel Barros Borgoño 160, Oficina 607 (Metro Manuel Montt)</p>
+      <p>dentiva.recepcion&#64;gmail.com</p>
+      <p>+56 9 9993 5071</p>
+      <p class="text-[var(--color-dorado-navp)] font-semibold mt-4">Síguenos en nuestras redes sociales</p>
+      <div class="flex gap-4 mt-2">
+        <!-- Iconos (puedes usar lucide o heroicons si los integras) -->
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok text-white text-xl"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram text-white text-xl"></i></a>
+      </div>
+    </div>
+
+<!-- COLUMNA DERECHA: FORMULARIO -->
+<div>
+  <h3 class="text-xl font-semibold mb-4 text-white">Tu sonrisa y bienestar son nuestra prioridad.</h3>
+<form class="space-y-4" (ngSubmit)="enviarFormulario()">
+  <!-- Nombre y Correo -->
+  <div class="flex flex-col md:flex-row gap-4">
+    <div class="w-full">
+      <input type="text" [(ngModel)]="datos.nombre" name="nombre" placeholder="*Nombre"
+        [ngClass]="{ 'border-red-500 border': errores['nombre'] }"
+        class="w-full px-4 py-2 rounded bg-white text-black" required />
+      <p *ngIf="errores['nombre']" class="text-red-500 text-sm mt-1">{{ errores['nombre'] }}</p>
+    </div>
+
+    <div class="w-full">
+      <input type="email" [(ngModel)]="datos.correo" name="correo" placeholder="*Correo"
+        [ngClass]="{ 'border-red-500 border': errores['correo'] }"
+        class="w-full px-4 py-2 rounded bg-white text-black" required />
+      <p *ngIf="errores['correo']" class="text-red-500 text-sm mt-1">{{ errores['correo'] }}</p>
+    </div>
+  </div>
+
+  <!-- Teléfono y Tipo de consulta -->
+  <div class="flex flex-col md:flex-row gap-4">
+    <div class="w-full">
+      <input type="tel" [(ngModel)]="datos.telefono" name="telefono" placeholder="*Teléfono"
+        [ngClass]="{ 'border-red-500 border': errores['telefono'] }"
+        class="w-full px-4 py-2 rounded bg-white text-black" required />
+      <p *ngIf="errores['telefono']" class="text-red-500 text-sm mt-1">{{ errores['telefono'] }}</p>
+    </div>
+
+    <div class="w-full">
+      <select [(ngModel)]="datos.tipoConsulta" name="tipoConsulta"
+        [ngClass]="{ 'border-red-500 border': errores['tipoConsulta']}"
+        class="w-full px-4 py-2 rounded bg-white text-black" required>
+        <option value="">Tipo de consulta</option>
+        <option value="Consulta Dental">Consulta Dental</option>
+        <option value="Consulta Estética">Consulta Estética</option>
+        <option value="Urgencias">Urgencias</option>
+      </select>
+      <p *ngIf="errores['tipoConsulta']" class="text-red-500 text-sm mt-1">{{ errores['tipoConsulta']}}</p>
+    </div>
+  </div>
+
+  <!-- Asunto -->
+  <div class="w-full">
+    <textarea [(ngModel)]="datos.asunto" name="asunto" placeholder="Asunto de la consulta"
+      [ngClass]="{ 'border-red-500 border': errores['asunto']  }"
+      class="w-full px-4 py-2 rounded bg-white text-black resize-none h-28" rows="4" required></textarea>
+    <p *ngIf="errores['asunto']" class="text-red-500 text-sm mt-1">{{ errores['asunto'] }}</p>
+  </div>
+
+  <!-- Botón -->
+  <button type="submit"
+    class="mt-2 bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] transition text-white px-6 py-2 rounded-full">
+    Enviar
+  </button>
+</form>
+
+<app-modal-respuesta
+  [visible]="modalVisible"
+  [mensaje]="mensajeModal"
+  [onClose]="cerrarModal.bind(this)">
+</app-modal-respuesta>
+</div>
+
+  </div>
+</footer>
+
+<!-- BARRA LEGAL -->
+<div class="bg-black text-center text-white py-4 text-sm">
+  Derechos reservados 2025 Dentiva Clínica Dental & Estética
+</div>
+
