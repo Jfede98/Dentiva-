@@ -1,5 +1,5 @@
 <main class="font-montserrat">
-  <!-- HERO SECTION -->
+  <!-- Seccion Banner Principal -->
 <section
   class="relative bg-cover bg-center px-6 text-white h-[500px] md:h-[850px]"
   style="background-image: url('/./dentiva-bannerhome.png');"
@@ -18,7 +18,7 @@
       </a>
       <a href="https://api.whatsapp.com/send?phone=56999935071&text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer">
         <button class="mt-4 px-4 py-2 rounded-full font-semibold text-white bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] cursor-pointer transition">
-          Llamar al 12345678
+          Llamar al +56999935071
         </button>
       </a>
     </div>
@@ -26,7 +26,7 @@
 </section>
 
 
-<!-- DESTACADO -->
+<!-- Seccion Destacado -->
 <section class="py-12 px-4 flex flex-col-reverse lg:flex-row items-center gap-8 max-w-7xl mx-auto">
   <!-- Imagen -->
   <div class="w-full lg:w-1/2 flex justify-center">
@@ -35,7 +35,7 @@
 
   <!-- Texto -->
   <div class="w-full lg:w-1/2 space-y-4">
-    <p class="text-dorado-navp font-bold">Ortodoncia y Ortopedia</p>
+    <p class="text-dorado-navp font-bold">Ortodoncia costo cero</p>
     <p>En nuestra especialidad de Endodoncia, nos enfocamos en el diagnóstico y tratamiento de las enfermedades que afectan la pulpa dental y los tejidos que rodean la raíz del diente.</p>
     
     <!-- Lista con íconos personalizados -->
@@ -54,7 +54,7 @@
       </li>
     </ul>
 
-    <!-- Precio centrado -->
+    <!-- Precio -->
     <div class="flex justify-center">
       <div class="bg-gray-100 p-6 rounded shadow text-center w-64">
         <p class="text-4xl font-bold text-dorado-navp">$0</p>
@@ -64,14 +64,14 @@
 
     <!-- Botones -->
     <div class="flex  justify-center gap-4 mt-4">
-      <a href="https://8ae8c9cefc8bfd0f423f19afb00c802f2ae29dbd.agenda.softwaredentalink.com/agenda?modalidad=1" target="_blank" rel="noopener noreferrer">
+      <a routerLink="/servicios">
         <button class="px-4 py-2 rounded-full font-semibold text-[var(--color-dorado-navp)] border border-[var(--color-dorado-navp)] hover:bg-[var(--color-fondo-buttonsh)] cursor-pointer transition">
-          Agendar una hora
+          Ver nuestros servicios
         </button>
       </a>
       <a href="https://api.whatsapp.com/send?phone=56999935071&text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer">
         <button class="px-4 py-2 rounded-full font-semibold text-white bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] cursor-pointer transition">
-          Llamar al 12345678
+          Agendar una hora
         </button>
       </a>
     </div>
@@ -79,7 +79,7 @@
 </section>
 
 
-<!-- ABOUT DENTIVA -->
+<!-- Seccion Acerca de Dentiva -->
 <section class="bg-gray-100 py-12 px-4">
   <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 items-center">
     <!-- Texto -->
@@ -90,17 +90,17 @@
         En nuestra clínica dental, ofrecemos lo mejor en cuanto a cuidado dental y tratamiento para mejorar tu higiene oral. Nuestros expertos se han preparado para proveer procedimientos dentales seguros para que nuestros pacientes se sientan relajados y cómodos cuando nos visitan.
       </p>
 
-      <!-- Lista con icono + texto alineado -->
-      <ul class="space-y-6 mt-6"> <!-- mayor separación y fuente más grande -->
+      <!-- Lista -->
+      <ul class="space-y-6 mt-6">
         <li class="flex items-start gap-4">
-          <img src="./icono-diente.svg" alt="" class="w-7 h-7 mt-1" />
+          <img src="./icono-diente.svg" alt="" class="w-11 h-11 mt-1" />
           <div>
             <span class="block text-[var(--color-dorado-navp)] text-xl font-semibold">Dentistas altamente profesionales</span>
             <p class="text-lg">Encendemos tu sonrisa con servicios dentales de parte de nuestros expertos dentistas.</p>
           </div>
         </li>
         <li class="flex items-start gap-4">
-          <img src="./icono-carpeta.svg" alt="" class="w-7 h-7 mt-1" />
+          <img src="./icono-carpeta.svg" alt="" class="w-11 h-11 mt-1" />
           <div>
             <span class="block text-[var(--color-dorado-navp)] text-xl font-semibold">Proveemos la mejor calidad de servicio dental cerca de ti</span>
             <p class="text-lg">Proveemos la mejor calidad de servicio dental cerca de ti.</p>
@@ -109,14 +109,14 @@
       </ul>
     </div>
 
-    <!-- Imagen -->
+
     <img src="./equipo-co.png" alt="Equipo Dentiva" class="w-full lg:w-1/2 rounded-xl" />
   </div>
 </section>
 
 
 
-<!-- EQUIPO DENTAL -->
+<!-- Seccion Equipo Dentiva -->
 <section class="py-12 px-4 text-center">
   <h3 class="text-[var(--color-dorado-navp)] font-semibold">Nuestro equipo dental</h3>
   <h2 class="text-2xl font-bold mb-4 text-[var(--color-dorado-navp)]">Los mejores dentistas de Providencia</h2>
@@ -126,100 +126,77 @@
 
   <!-- Cards -->
   <div class="flex flex-wrap justify-center items-center gap-6">
-    <!-- Card 1 -->
-    <div class="bg-foundation-y75 rounded-xl shadow p-6 w-64 flex flex-col items-center border-2 border-[var(--color-foundation-y100)]">
-      <div class="w-28 h-28 bg-gray-100 rounded-full mb-3">
-        <img src="./drchavez.png" alt="">
+    <div
+      *ngFor="let doctor of especialistas"
+      class="bg-white rounded-xl shadow p-6 w-64 flex flex-col items-center border-2 border-black"
+    >
+      <div class="w-28 h-28 bg-gray-100 rounded-full mb-3 overflow-hidden border-2 border-[var(--color-dorado-navp)]">
+        <img [src]="doctor.imagen" [alt]="doctor.nombre" class="object-cover w-full h-full" />
       </div>
-      <p class="font-semibold text-[var(--color-dorado-navp)]">Dr. Roberto Chavez</p>
-      <p class="text-sm text-black mb-2">Ortodoncista</p>
-      <a href="https://8ae8c9cefc8bfd0f423f19afb00c802f2ae29dbd.agenda.softwaredentalink.com/agenda?modalidad=1" target="_blank" rel="noopener noreferrer">
-        <button class="text-white bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] transition px-4 py-1.5 rounded-full text-sm">
-          Agendar una hora
-        </button>
-      </a>
-    </div>
+      <p class="font-semibold text-[var(--color-dorado-navp)]">{{ doctor.nombre }}</p>
+      <p class="text-sm text-black mb-2">{{ doctor.especialidad }}</p>
 
-    <!-- Card 2 -->
-    <div class="bg-foundation-y75 rounded-xl shadow p-6 w-64 flex flex-col items-center border-2 border-[var(--color-foundation-y100)]">
-      <div class="w-28 h-28 bg-gray-100 rounded-full mb-3">
-        <img src="./drayepez.png" alt="">
-      </div>
-      <p class="font-semibold text-[var(--color-dorado-navp)]">Dra. Lisseth Yepez</p>
-      <p class="text-sm text-black mb-2">Endodoncista</p>
-      <button class="text-white bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] transition px-4 py-1.5 rounded-full text-sm">
-        Agendar una hora
-      </button>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="bg-foundation-y75 rounded-xl shadow p-6 w-64 flex flex-col items-center border-2 border-[var(--color-foundation-y100)]">
-      <div class="w-28 h-28 bg-gray-100 rounded-full mb-3">
-        <img src="./drasalas.png" alt="">
-      </div>
-      <p class="font-semibold text-[var(--color-dorado-navp)]">Dra. Liset Salas</p>
-      <p class="text-sm text-black mb-2">Ortodoncista</p>
-      <button class="text-white bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] transition px-4 py-1.5 rounded-full text-sm">
-        Agendar una hora
-      </button>
+      <ng-container *ngIf="doctor.link">
+        <a [href]="doctor.link" target="_blank" rel="noopener noreferrer">
+          <button
+            class="text-[var(--color-dorado-navp)] border border-[var(--color-dorado-navp)] hover:bg-[var(--color-fondo-buttonsh)] transition px-4 py-1.5 rounded-full text-sm cursor-pointer"
+          >
+            Agendar una hora
+          </button>
+        </a>
+      </ng-container>
     </div>
   </div>
 </section>
 
 
 
-<!-- SERVICIOS EN SANTIAGO -->
+<!-- Sección Servicios -->
 <section class="bg-gray-100 py-12 px-4">
-  <h2 class="text-2xl text-[var(--color-dorado-navp)] font-semibold text-center mb-4">Nuestros servicios dentales en Santiago</h2>
-  <p class="text-center max-w-2xl mx-auto mb-8 text-gray-600">
-    Todas las Especialidades  | Especialistas acreditados  | Seguimiento personalizado de cada tratamiento
-  </p>
-
-  <div class="flex flex-wrap justify-center items-center gap-6">
-    <!-- Servicio card -->
-    <div class="bg-foundation-y75 p-6 w-72 rounded-xl shadow text-center">
-      <div class="w-full h-40 bg-gray-200 rounded"></div>
-      <h3 class="text-[var(--color-dorado-navp)] mt-4 font-semibold">Nuestro equipo dental</h3>
-      <p class="text-sm text-gray-600 mt-2">
-        Proveemos la mejor calidad de servicio dental cerca de ti.
+  <!-- Header con título + botón -->
+  <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 max-w-4xl mx-auto">
+    <div>
+      <h2 class="text-2xl text-[var(--color-dorado-navp)] font-semibold mb-2">
+        Nuestros servicios dentales en Santiago
+      </h2>
+      <p class="text-gray-600">
+        Todas las Especialidades | Especialistas acreditados | Seguimiento personalizado de cada tratamiento
       </p>
-      <button class="mt-4 text-[var(--color-dorado-navp)] bg-white border border-[var(--color-dorado-navp)] hover:bg-[var(--color-fondo-buttonsh)] transition px-4 py-1 rounded-full text-sm">
-        Ver más
-      </button>
     </div>
-
-    <!-- Duplicar según necesidad -->
-    <div class="bg-foundation-y75 p-6 w-72 rounded-xl shadow text-center">
-      <div class="w-full h-40 bg-gray-200 rounded"></div>
-      <h3 class="text-[var(--color-dorado-navp)] mt-4 font-semibold">Ortodoncia avanzada</h3>
-      <p class="text-sm text-gray-600 mt-2">
-        Tratamientos para alinear tus dientes con tecnología moderna.
-      </p>
-      <button class="mt-4 text-[var(--color-dorado-navp)] bg-white border border-[var(--color-dorado-navp)] hover:bg-[var(--color-fondo-buttonsh)] transition px-4 py-1 rounded-full text-sm">
-        Ver más
+    <a routerLink="/servicios">
+      <button class="text-[var(--color-dorado-navp)] border border-[var(--color-dorado-navp)] hover:bg-[var(--color-fondo-buttonsh)] transition px-6 py-2 rounded-full whitespace-nowrap cursor-pointer">
+      Ver todos los servicios
       </button>
-    </div>
-
-    <div class="bg-foundation-y75 p-6 w-72 rounded-xl shadow text-center">
-      <div class="w-full h-40 bg-gray-200 rounded"></div>
-      <h3 class="text-[var(--color-dorado-navp)] mt-4 font-semibold">Estética dental</h3>
-      <p class="text-sm text-gray-600 mt-2">
-        Devuélvele la belleza a tu sonrisa con nuestros especialistas.
-      </p>
-      <button class="mt-4 text-[var(--color-dorado-navp)] bg-white border border-[var(--color-dorado-navp)] hover:bg-[var(--color-fondo-buttonsh)] transition px-4 py-1 rounded-full text-sm">
-        Ver más
-      </button>
-    </div>
+    </a>
   </div>
 
-  <div class="flex justify-center mt-8">
-    <button class="bg-[var(--color-dorado-navp)] hover:bg-[var(--color-dorado-buttonph)] transition text-white px-6 py-2 rounded-full">
-      Ver todos los servicios
-    </button>
+  <!-- Cards de servicios centradas dentro del mismo ancho -->
+  <div class="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
+    <div
+      *ngFor="let servicio of servicios"
+      class="bg-white border-1 border-[var(--color-dorado-navp)] p-6 w-72 rounded-xl shadow text-left"
+    >
+      <h3 class="text-[var(--color-dorado-navp)] font-semibold mb-2">
+        {{ servicio.titulo }}
+      </h3>
+      <p class="text-sm text-gray-600 mb-4">
+        {{ servicio.descripcion }}
+      </p>
+      <div class="w-full h-40 bg-gray-200 rounded overflow-hidden">
+        <img
+          *ngIf="servicio.imagen"
+          [src]="servicio.imagen"
+          [alt]="servicio.titulo"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ENCUÉNTRANOS -->
+
+
+<!-- Seccion mapa -->
 <section class="py-12 px-4 text-center">
   <h2 class="text-2xl text-[var(--color-dorado-navp)] font-semibold mb-2">Encuéntranos</h2>
   <p class="text-gray-600 mb-6">Dr. Manuel Barros Borgoño 160, Oficina 607 (Metro Manuel Montt)</p>

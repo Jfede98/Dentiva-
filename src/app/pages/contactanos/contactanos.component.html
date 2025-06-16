@@ -1,1 +1,83 @@
-<p>contactanos works!</p>
+<div>
+  <!-- Sección Banner -->
+  <section class="relative h-[25vh] md:h-[35vh] flex items-center justify-center">
+    <img
+        src="./dentiva-silla.png"
+        alt="Banner Dentiva"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black to-[#3C3D3F] opacity-70"></div>
+    <div class="relative z-10 max-w-6xl mx-auto p-4 md:p-0 text-white">
+        <div class="md:w-1/2">
+        <h1 class="text-4xl md:text-5xl font-semibold mb-4 text-left">Contactos y agenda</h1>
+        <p class="text-lg md:text-1xl text-left">
+            Si tienes alguna pregunta o deseas agendar una cita, no dudes en contactarnos. Estamos aquí para ayudarte a lograr una sonrisa saludable y hermosa.
+        </p>
+        </div>
+    </div>
+   </section>
+
+
+    <!-- Sección 4 Cards -->
+<div class="py-12 px-4 bg-white">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div
+      *ngFor="let card of cards"
+      class="border-2 border-[var(--color-dorado-navp)] rounded-xl p-6 flex flex-col items-start text-left"
+    >
+      <img [src]="card.icono" [alt]="card.titulo" class="w-10 h-10 mb-4" />
+      <h3 class="text-[var(--color-dorado-navp)] font-semibold text-lg mb-2">
+        {{ card.titulo }}
+      </h3>
+      <p class="text-sm text-black-600 mb-4">{{ card.descripcion }}</p>
+
+      <!-- Si es el scroll interno -->
+      <a
+        *ngIf="card.link === '#footer'; else externalLink"
+        (click)="scrollToFooter()"
+        class="text-[var(--color-dorado-navp)] underline text-sm font-bold hover:opacity-80 transition cursor-pointer"
+      >
+        {{ card.texto }}
+      </a>
+
+      <!-- Si es link externo -->
+      <ng-template #externalLink>
+        <a
+          [href]="card.link"
+          class="text-[var(--color-dorado-navp)] underline text-sm font-bold hover:opacity-80 transition"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ card.texto }}
+        </a>
+      </ng-template>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Seccion Equipo Dentiva -->
+  <section class="py-12 px-4 text-center">
+        <h2 class="text-2xl font-bold mb-4 text-[var(--color-dorado-navp)]">Puedes agendar con nuestros Profesionales</h2>
+        <p class="max-w-2xl mx-auto mb-8 text-gray-600">
+            En Dentiva, contamos con un equipo de especialistas altamente capacitados y comprometidos con tu salud dental.
+        </p>
+
+        <!-- Cards -->
+        <div class="flex flex-wrap justify-center items-center gap-6">
+            <div
+            *ngFor="let doctor of especialistas"
+            class="bg-white rounded-xl shadow p-6 w-64 flex flex-col items-center border-2 border-[var(--color-dorado-navp)]"
+            >
+            <div class="w-28 h-28 bg-gray-100 rounded-full mb-3 overflow-hidden border-2 border-[var(--color-dorado-navp)]">
+                <img [src]="doctor.imagen" [alt]="doctor.nombre" class="object-cover w-full h-full" />
+            </div>
+            <p class="font-semibold text-[var(--color-dorado-navp)]">{{ doctor.nombre }}</p>
+            <p class="text-sm text-black mb-2">{{ doctor.especialidad }}</p>
+
+            </div>
+        </div>
+    </section>
+
+</div>
+

@@ -1,1 +1,56 @@
-<p>servicios works!</p>
+<div>
+  <!-- Sección completa con fondo: título + cards -->
+  <section class="relative py-16 px-4">
+    <!-- Imagen de fondo -->
+    <img
+      src="./smile-design.png"
+      alt="Fondo Servicios"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+    />
+    <!-- Filtro oscuro -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black to-[#3C3D3F] opacity-70"></div>
+
+    <!-- Contenido con fondo -->
+    <div class="relative z-10 max-w-6xl mx-auto text-white">
+      <!-- Título y descripción -->
+      <div class="md:w-1/2 mb-12">
+        <h1 class="text-4xl md:text-5xl font-semibold mb-4 text-left">Servicios</h1>
+        <p class="text-lg md:text-1xl text-left">
+          Ofrecemos tratamientos estéticos y dentales personalizados, realizados por especialistas, con tecnología de vanguardia y enfoque integral en tu bienestar. Descubre cómo podemos ayudarte a verte y sentirte mejor.
+        </p>
+      </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div
+        *ngFor="let card of cards"
+        class="bg-white border border-gray-200 rounded-xl p-6 shadow-md flex flex-col justify-between h-[320px] md:h-[380px] text-black"
+    >
+        <!-- Título más grande -->
+        <h3 class="text-4xl font-semibold mb-3">{{ card.titulo }}</h3>
+
+        <!-- Descripción -->
+        <p class="text-[#656565] mb-6 text-lg font-medium leading-relaxed">
+        {{ card.descripcion }}
+        </p>
+
+        <!-- Imagen + enlace -->
+        <div class="flex items-center gap-6 mt-auto">
+        <img
+            [src]="card.imagen"
+            [alt]="card.titulo"
+            class="w-50 h-50 object-contain"
+        />
+        <a
+            [routerLink]="card.link"
+            class="text-[var(--color-dorado-navp)] underline font-medium hover:opacity-80 transition"
+        >
+            {{ card.texto }}
+        </a>
+        </div>
+    </div>
+    </div>
+
+    </div>
+  </section>
+</div>
