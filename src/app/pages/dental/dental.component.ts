@@ -1,5 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ServicioDental, ServiciosDentalesService } from '../../services/servicios-dentales.service';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dental',
@@ -8,48 +11,27 @@ import { Component } from '@angular/core';
   styleUrl: './dental.component.css'
 })
 export class DentalComponent {
-  serviciosDentales = [
-    {
-      titulo: 'Ortodoncia y Ortopedia',
-      descripcion: 'Corrección funcional y estética de dientes y mordida.',
-      imagen: './dental/ortodoncia.png',
-      link: 'https://8ae8c9cefc8bfd0f423f19afb00c802f2ae29dbd.agenda.softwaredentalink.com/agenda?modalidad=1'
-    },
-    {
-      titulo: 'Estética Dental',
-      descripcion: 'Blanqueamiento, carillas y más para una sonrisa armónica.',
-      imagen: './dental/estetica.png',
-      link: 'https://8ae8c9cefc8bfd0f423f19afb00c802f2ae29dbd.agenda.softwaredentalink.com/agenda?modalidad=1'
-    },
-    {
-      titulo: 'Implantología',
-      descripcion: 'Reemplazo dental seguro y duradero con tecnología avanzada.',
-      imagen: './ortodoncia.png',
-      link: 'https://8ae8c9cefc8bfd0f423f19afb00c802f2ae29dbd.agenda.softwaredentalink.com/agenda?modalidad=1'
-    },
-    {
-      titulo: 'Endodoncia',
-      descripcion: 'Tratamientos de conducto que salvan y restauran piezas dentales.',
-      imagen: './estetica-dental.png',
-      link: 'https://8ae8c9cefc8bfd0f423f19afb00c802f2ae29dbd.agenda.softwaredentalink.com/agenda?modalidad=1'
-    },
-    {
-      titulo: 'Odontología General',
-      descripcion: 'Limpiezas, diagnósticos y cuidados preventivos.',
-      imagen: './dental/general.png',
-      link: 'https://8ae8c9cefc8bfd0f423f19afb00c802f2ae29dbd.agenda.softwaredentalink.com/agenda?modalidad=1'
-    },
-    {
-      titulo: 'Rehabilitación Oral',
-      descripcion: 'Soluciones completas para restaurar función y estética.',
-      imagen: './smile-design.png',
-      link: 'https://8ae8c9cefc8bfd0f423f19afb00c802f2ae29dbd.agenda.softwaredentalink.com/agenda?modalidad=1'
-    },
-    {
-      titulo: 'Radiografías',
-      descripcion: 'Diagnóstico preciso y rápido con imágenes digitales de alta calidad.',
-      imagen: './dental/radiografia.png',
-      link: 'https://8ae8c9cefc8bfd0f423f19afb00c802f2ae29dbd.agenda.softwaredentalink.com/agenda?modalidad=1'
-    }
-  ];
+  serviciosDentales: ServicioDental[] = [];
+
+  constructor(
+    private serviciosService: ServiciosDentalesService,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {
+    this.cargarServicios(); // primera carga
+
+    // Vuelve a cargar cada vez que se completa una navegación
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.cargarServicios();
+      });
+  }
+
+  cargarServicios(): void {
+    this.serviciosService.getServicios().subscribe((data) => {
+      this.serviciosDentales = data;
+    });
+  }
 }
